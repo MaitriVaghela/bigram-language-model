@@ -24,12 +24,12 @@ Frequency counts computed for all token pairs
 
 Represented as a count matrix
 
-Example Count Matrix:
+|       | a  | b | c |
+| ----- | -- | - | - |
+| **a** | 10 | 5 | 2 |
+| **b** | 3  | 8 | 1 |
+| **c** | 0  | 2 | 6 |
 
-      a    b    c
-a    10    5    2
-b     3    8    1
-c     0    2    6
 
 Rows: previous token (xᵢ₋₁)
 
