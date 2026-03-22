@@ -43,10 +43,13 @@ P(xᵢ | xᵢ₋₁) = Count(xᵢ₋₁, xᵢ) / Count(xᵢ₋₁)
 
 Example Probability Matrix:
 
-      a       b       c
-a    0.59    0.29    0.12
-b    0.25    0.67    0.08
-c    0.00    0.25    0.75
+|       | a    | b    | c    |
+| ----- | ---- | ---- | ---- |
+| **a** | 0.59 | 0.29 | 0.12 |
+| **b** | 0.25 | 0.67 | 0.08 |
+| **c** | 0.00 | 0.25 | 0.75 |
+
+
 4. Sampling / Generation
 
 Text is generated autoregressively: the next token is sampled from the learned bigram distribution.
