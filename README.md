@@ -7,10 +7,6 @@ A clean, from-scratch implementation of a **Bigram Language Model** built to dev
 ## 📋 Table of Contents
 
 - [Overview](#overview)
-- [Repository Structure](#repository-structure)
-- [Setup & Installation](#setup--installation)
-- [Dataset](#dataset)
-- [How to Run](#how-to-run)
 - [Sample Output](#sample-output)
 - [Model Details](#model-details)
 - [Limitations](#limitations)
@@ -28,66 +24,6 @@ The bigram assumption factorizes the joint probability of a sequence as:
 $$P(x_1, x_2, \ldots, x_n) = \prod_{i=1}^{n} P(x_i \mid x_{i-1})$$
 
 Each token depends only on the immediately preceding token — simple, interpretable, and a great foundation before moving to neural approaches.
-
----
-
-## 📁 Repository Structure
-
-```
-bigram-language-model/
-│
-├── bigram.py          # Core model: tokenization, count matrix, probability estimation, sampling
-├── data/
-│   └── input.txt      # Training corpus
-├── requirements.txt   # Python dependencies
-└── README.md
-```
-
----
-
-## ⚙️ Setup & Installation
-
-**Requirements:**
-- Python 3.8+
-- Dependencies listed in `requirements.txt`
-
-**Steps:**
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/MaitriVaghela/bigram-language-model.git
-cd bigram-language-model
-
-# 2. (Optional) Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate         # Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-```
-
----
-
-## 📂 Dataset
-
-The model trains on a plain-text corpus (`data/input.txt`). Any `.txt` file works — the model reads it, builds a character-level vocabulary, and computes bigram statistics directly from the text.
-
-**To use your own data:** replace `data/input.txt` with any plain text file of your choice (e.g. a book, song lyrics, code). The larger and more consistent the corpus, the better the generated output.
-
----
-
-## ▶️ How to Run
-
-```bash
-python bigram.py
-```
-
-The script will:
-1. Load and tokenize the training corpus
-2. Build the bigram count matrix
-3. Normalize counts into a probability matrix
-4. Sample from the model to generate new text
 
 ---
 
@@ -190,13 +126,6 @@ This implementation is a stepping stone. Meaningful extensions include:
 
 ---
 
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 ## 🙏 References & Acknowledgments
 
 - Inspired by Andrej Karpathy's [makemore](https://github.com/karpathy/makemore) series
-- Jurafsky & Martin — [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/), Ch. 3: *N-gram Language Models*
