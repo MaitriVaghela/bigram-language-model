@@ -40,8 +40,6 @@ tolian
 juhe
 ```
 
-> Output quality depends heavily on corpus size and content. Character-level bigrams capture local patterns but not long-range structure.
-
 ---
 
 ## 🏗️ Model Details
@@ -55,7 +53,7 @@ juhe
 
 For every consecutive character pair $(x_{i-1}, x_i)$ in the corpus, we accumulate counts into a matrix $C \in \mathbb{Z}^{|\mathcal{V}| \times |\mathcal{V}|}$:
 
-$$C[x_{i-1},\, x_i] = \#\{(x_{i-1}, x_i) \text{ in corpus}\}$$
+\text{count of } (x_{i-1}, x_i) \text{ in corpus}
 
 Example count matrix:
 
